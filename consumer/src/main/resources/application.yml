@@ -1,0 +1,20 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: cloud-consumer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+
+ribbon:
+        ConnectTimeout: 5000
+        ReadTimeout: 5000
+        OkToRetryOnAllOperations: true
+        MaxAutoRetriesNextServer: 1
+        MaxAutoRetries: 1
